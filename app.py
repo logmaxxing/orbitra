@@ -64,7 +64,7 @@ def submit():
                 
         # print(f"Distance: {distance} KM")
         if duration>60: #this is because if the ride is above an hour
-            duration = round(duration/60,1)
+            duration_hour = round(duration/60,1)
             # print(f"Duration: {duration} hrs")
         # else:
             # print(f"Duration: {duration} mins")
@@ -72,9 +72,9 @@ def submit():
         if duration<60:
             time = f"{duration} Mins"
         elif duration>60:
-            time = f"{duration} Hours"
+            time = f"{duration_hour} Hours"
         elif duration==60:
-            time = f"{duration} Hour"
+            time = f"{duration_hour} Hour"
         else:
             print("error occured")
         return render_template('form.html', 
